@@ -10,14 +10,22 @@
                  android:icon="@drawable/ic_launcher">
 
         <activity android:name=".KindleFileOpenActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="application/mobi"
-                      android:scheme="file" />
-                <data android:mimeType="application/x-mobipocket-ebook"
-                      android:scheme="file" />
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:mimeType="application/mobi"/>
+                <data android:mimeType="application/x-mobipocket-ebook"/>
             </intent-filter>
+
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.VIEW"/>-->
+                <!--<category android:name="android.intent.category.DEFAULT"/>-->
+                <!--<category android:name="android.intent.category.BROWSABLE"/>-->
+                <!--<data android:mimeType="application/x-mobipocket-ebook"/>-->
+            <!--</intent-filter>-->
+
         </activity>
         <activity android:name=".SettingsActivity">
             <intent-filter>
@@ -25,6 +33,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
 
     </application>
 </manifest>
